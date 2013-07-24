@@ -1,0 +1,19 @@
+
+<%#include "post.h" %>
+<% tfetch(Post, post); %>
+
+<p style="color: red"><%=$ error %></p>
+<p style="color: green"><%=$ notice %></p>
+
+<h1>Showing Post</h1>
+<dt>ID</dt><dd><%= post.id() %></dd><br />
+<dt>Blog ID</dt><dd><%= post.blogId() %></dd><br />
+<dt>Title</dt><dd><%= post.title() %></dd><br />
+<dt>Content</dt><dd><%= post.content() %></dd><br />
+<dt>Created at</dt><dd><%= post.createdAt() %></dd><br />
+<dt>Updated at</dt><dd><%= post.updatedAt() %></dd><br />
+<dt>Lock Revision</dt><dd><%= post.lockRevision() %></dd><br />
+
+<%== linkTo("Edit", urla("edit", post.id())) %> |
+<%== linkTo("Back", urla("index")) %>
+

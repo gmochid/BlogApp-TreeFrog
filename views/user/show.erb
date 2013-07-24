@@ -1,0 +1,18 @@
+
+<%#include "user.h" %>
+<% tfetch(User, user); %>
+
+<p style="color: red"><%=$ error %></p>
+<p style="color: green"><%=$ notice %></p>
+
+<h1>Showing User</h1>
+<dt>Username</dt><dd><%= user.username() %></dd><br />
+<dt>Email</dt><dd><%= user.email() %></dd><br />
+<dt>Fullname</dt><dd><%= user.fullname() %></dd><br />
+<dt>Password</dt><dd><%= user.password() %></dd><br />
+<dt>Created at</dt><dd><%= user.createdAt() %></dd><br />
+<dt>Updated at</dt><dd><%= user.updatedAt() %></dd><br />
+<dt>Lock Revision</dt><dd><%= user.lockRevision() %></dd><br />
+
+<%== linkTo("Edit", urla("edit", user.username())) %> |
+<%== linkTo("Back", urla("index")) %>

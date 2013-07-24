@@ -1,0 +1,30 @@
+
+<%#include "user.h" %>
+<% tfetch(QVariantMap, user); %>
+
+<p style="color: red"><%=$ error %></p>
+<p style="color: green"><%=$ notice %></p>
+
+<h1>Editing User</h1>
+
+<%== formTag(urla("save", user["username"]), Tf::Post) %>
+  <p>
+    <label>Username<br /><input type="text" name="user[username]" value="<%= user["username"] %>" readonly="readonly" /></label>
+  </p>
+  <p>
+    <label>Email<br /><input type="text" name="user[email]" value="<%= user["email"] %>" /></label>
+  </p>
+  <p>
+    <label>Fullname<br /><input type="text" name="user[fullname]" value="<%= user["fullname"] %>" /></label>
+  </p>
+  <p>
+    <label>Password<br /><input type="text" name="user[password]" value="<%= user["password"] %>" /></label>
+  </p>
+  <p>
+    <input type="submit" value="Update" />
+  </p>
+</form>
+
+<%== linkTo("Show", urla("show", user["username"])) %> |
+<%== linkTo("Back", urla("index")) %>
+

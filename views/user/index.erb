@@ -1,0 +1,32 @@
+
+<%#include "user.h" %>
+
+<h1>Listing User</h1>
+
+<%== linkTo("Dashboard", QUrl("/Admin/dashboard")) %><br />
+
+<%== linkTo("New entry", urla("entry")) %><br />
+<br />
+<table border="1" cellpadding="5" style="border: 1px #d0d0d0 solid; border-collapse: collapse;">
+  <tr>
+    <th>Username</th>
+    <th>Email</th>
+    <th>Fullname</th>
+    <th>Password</th>
+  </tr>
+<% tfetch(QList<User>, userList); %>
+<% for (QListIterator<User> it(userList); it.hasNext(); ) {
+     const User &i = it.next(); %>
+  <tr>
+    <td><%= i.username() %></td>
+    <td><%= i.email() %></td>
+    <td><%= i.fullname() %></td>
+    <td><%= i.password() %></td>
+    <td>
+      <%== linkTo("Show", urla("show", i.username())) %>
+      <%== linkTo("Edit", urla("edit", i.username())) %>
+      <%== linkTo("Remove", urla("remove", i.username()), Tf::Post, "confirm('Are you sure?')") %>
+    </td>
+  </tr>
+<% } %>
+</table>

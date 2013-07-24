@@ -1,0 +1,36 @@
+<%#include "blog.h" %>
+<%#include "user.h" %>
+<% tfetch(QVariantMap, blog); %>
+<% tfetch(QList<User>, users); %>
+
+<p style="color: red"><%=$ error %></p>
+<p style="color: green"><%=$ notice %></p>
+
+<h1>Editing Blog</h1>
+
+<%== formTag(urla("save", blog["id"]), Tf::Post) %>
+  <p>
+    <label>ID<br />
+    <b><%= blog["id"] %></b>
+  </p>
+  <p>
+    <label>Username<br />
+    <select name="post[username]" selected="<%= blog["username"] %>">
+        <% foreach (User user, users) { %>
+        <option value="<%= user.username() %>" ><%= user.fullname() %></option>
+        <% } %>
+    </select>
+  </p>
+  <p>
+    <label>Title<br /><input type="text" name="blog[title]" value="<%= blog["title"] %>" /></label>
+  </p>
+  <p>
+    <label>Description<br /><input type="text" name="blog[description]" value="<%= blog["description"] %>" /></label>
+  </p>
+  <p>
+    <input type="submit" value="Update" />
+  </p>
+</form>
+
+<%== linkTo("Show", urla("show", blog["id"])) %> |
+<%== linkTo("Back", urla("index")) %>

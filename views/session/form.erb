@@ -1,0 +1,15 @@
+
+<%#include "admin.h" %>
+
+<h1>Login</h1>
+<div style="color: red;"><%==$message %></div>
+<%== formTag(urla("login"), Tf::Post) %>
+    <p>
+        <label>Username<br /><input type="text" name="username"/></label>
+    </p>
+    <p>
+      <label>Password<br /><input type="password" name="password"/></label>
+    </p>
+        <input type="submit" text="Login">
+</form>
+

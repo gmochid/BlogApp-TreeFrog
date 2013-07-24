@@ -1,0 +1,31 @@
+<%#include "blog.h" %>
+
+<h1>Listing Blog</h1>
+
+<%== linkTo("Dashboard", QUrl("/Admin/dashboard")) %><br />
+
+<%== linkTo("New entry", urla("entry")) %><br />
+<br />
+<table border="1" cellpadding="5" style="border: 1px #d0d0d0 solid; border-collapse: collapse;">
+  <tr>
+    <th>ID</th>
+    <th>Username</th>
+    <th>Title</th>
+    <th>Description</th>
+  </tr>
+<% tfetch(QList<Blog>, blogList); %>
+<% for (QListIterator<Blog> it(blogList); it.hasNext(); ) {
+     const Blog &i = it.next(); %>
+  <tr>
+    <td><%= i.id() %></td>
+    <td><%= i.username() %></td>
+    <td><%= i.title() %></td>
+    <td><%= i.description() %></td>
+    <td>
+      <%== linkTo("Show", urla("show", i.id())) %>
+      <%== linkTo("Edit", urla("edit", i.id())) %>
+      <%== linkTo("Remove", urla("remove", i.id()), Tf::Post, "confirm('Are you sure?')") %>
+    </td>
+  </tr>
+<% } %>
+</table>

@@ -1,0 +1,19 @@
+
+<%#include "blog.h" %>
+<% tfetch(Blog, blog); %>
+
+<p style="color: red"><%=$ error %></p>
+<p style="color: green"><%=$ notice %></p>
+
+<h1>Showing Blog</h1>
+<dt>ID</dt><dd><%= blog.id() %></dd><br />
+<dt>Username</dt><dd><%= blog.username() %></dd><br />
+<dt>Title</dt><dd><%= blog.title() %></dd><br />
+<dt>Description</dt><dd><%= blog.description() %></dd><br />
+<dt>Created at</dt><dd><%= blog.createdAt() %></dd><br />
+<dt>Updated at</dt><dd><%= blog.updatedAt() %></dd><br />
+<dt>Lock Revision</dt><dd><%= blog.lockRevision() %></dd><br />
+
+<%== linkTo("Edit", urla("edit", blog.id())) %> |
+<%== linkTo("Back", urla("index")) %>
+

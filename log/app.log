@@ -1,0 +1,27 @@
+2013-07-05 15:49:21 WARN  [139793147291392] socket error: waitForBytesWritten function [The remote host closed the connection]
+2013-07-10 11:51:56 ERROR [140402463037248] Invalid directive, '"/" "Blog#index"'  [line : 11]
+2013-07-10 11:52:39 ERROR [139817954953024] Invalid directive, '"/" "Blog#index"'  [line : 11]
+2013-07-10 11:52:39 ERROR [139817954953024] Invalid directive, '"/test" "Blog#index"'  [line : 12]
+2013-07-11 09:48:00 WARN  [140687109998336] socket error: waitForBytesWritten function [The remote host closed the connection]
+2013-07-11 09:48:00 WARN  [140687099455232] socket error: waitForBytesWritten function [The remote host closed the connection]
+2013-07-11 09:49:57 ERROR [139936870500160] Database name empty string
+2013-07-11 09:49:57 ERROR [139936870500160] Database name empty string
+2013-07-11 09:49:57 ERROR [139936870500160] Database name empty string
+2013-07-11 09:49:57 ERROR [139936870500160] Database name empty string
+2013-07-11 09:49:57 ERROR [139936870500160] Database name empty string
+2013-07-11 09:49:57 ERROR [139936870500160] Database name empty string
+2013-07-11 09:49:57 ERROR [139936870500160] Database name empty string
+2013-07-11 09:49:57 ERROR [139936870500160] Database name empty string
+2013-07-11 09:49:57 ERROR [139936870500160] Database name empty string
+2013-07-11 09:49:57 ERROR [139936870500160] Database name empty string
+2013-07-11 09:49:57 ERROR [139936870500160] Database name empty string
+2013-07-11 09:49:57 ERROR [139936870500160] Database name empty string
+2013-07-11 09:49:57 ERROR [139936870500160] Database name empty string
+2013-07-11 09:49:57 ERROR [139936870500160] Database name empty string
+2013-07-11 09:49:57 ERROR [139936870500160] Database name empty string
+2013-07-11 09:49:57 ERROR [139936870500160] Database name empty string
+2013-07-11 09:49:57 ERROR [139936870500160] Database name empty string
+2013-07-11 09:49:57 ERROR [139936870500160] Database name empty string
+2013-07-11 09:49:57 ERROR [139936870500160] Database name empty string
+2013-07-11 09:49:57 ERROR [139936870500160] Database name empty string
+2013-07-11 12:02:09 WARN  [140475696883456] socket error: waitForBytesWritten function [The remote host closed the connection]

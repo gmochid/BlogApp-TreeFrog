@@ -1,0 +1,13 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title><%= controller()->name() + ": " + controller()->activeAction() %></title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/bootstrap.min.js"></script>
+</head>
+<body>
+    <%== linkTo("Log Out", QUrl("/Session/logout")) %>
+    <%== yield() %>
+</body>
+</html>

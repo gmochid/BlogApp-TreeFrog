@@ -1,0 +1,4 @@
+USER (username, email, password, created_at, updated_at, lock_revision)
+	BLOG
+		POST (id, blog_id, title, content, created_at, updated_at, lock_revision)
+ADMIN (username, password)
